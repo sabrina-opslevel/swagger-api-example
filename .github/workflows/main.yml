@@ -1,2 +1,7 @@
-- name: Force Failure
-  run: exit 1
+name: Always Pass
+on: [push, pull_request]
+jobs:
+  pass:
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 0
